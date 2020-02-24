@@ -1,0 +1,37 @@
+<!--======================================
+=            Sector Performance          =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This page contains the 
+      HTML output of the Sector Performance 
+      data. It utilies the Material UI tables 
+      and dynamcially styles the percent 
+      change in each sector (red/green) based 
+      on the percentage. 
+-->
+
+<br />
+<div class="page-title">
+  <h1>Sector Performance</h1>
+</div>
+
+<table mat-table [dataSource]="sectorPerformance" class="mat-elevation-z8">
+  <ng-container matColumnDef="Sector">
+    <th mat-header-cell *matHeaderCellDef>Sector</th>
+    <td mat-cell *matCellDef="let s">{{ s.sector }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Change">
+    <th mat-header-cell *matHeaderCellDef>% Change</th>
+    <td mat-cell *matCellDef="let s">
+      <div
+        [style.color]="s.changesPercentage.indexOf('-') == 0 ? 'red' : 'green'"
+      >
+        {{ s.changesPercentage }}
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

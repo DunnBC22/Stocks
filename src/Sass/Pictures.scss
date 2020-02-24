@@ -1,0 +1,38 @@
+/*=============================================
+=            Pictures scss file               =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the Pictures scss file. 
+      It includes the css for Pictures and logos.
+*/
+
+@mixin pictureWidth($minWidth: 100px, $percentWidth: 20%, $maxWidth: 250px) {
+  min-width: $minWidth;
+  width: $percentWidth;
+  max-width: $maxWidth;
+}
+
+.picture img {
+  @include pictureWidth(300px, 25%, 650px);
+  height: auto;
+  opacity: 1;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.logos a img {
+  @include pictureWidth();
+  height: auto;
+}
+
+.logo-side-by-side {
+  display: inline-block;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+/*=============================================
+=            RegTables scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the base variables 
+        partial scss file. It includes the 
+        css for the regular tables embedded on 
+        the Google page (including within the 
+        accordion).
+*/
+
+.table-side-by-side {
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+
+  @media (max-width: 625px) {
+    width: 100%;
+  }
+}
+
+td {
+  padding-right: 20px;
+}

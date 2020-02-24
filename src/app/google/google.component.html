@@ -1,0 +1,67 @@
+<!--=======================================
+=                   Google                =
+========================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the Google Page. 
+      It shows the company Profile information 
+      at the top and then includes an accordion 
+      with other vital financial information. 
+      Stock Profile information and information 
+      for each tab (and sub-tab) is imported from 
+      additional components.
+-->
+
+<br />
+<div class="page-title">
+  <h1>Google Stock Information</h1>
+</div>
+<br />
+<app-stock-profile></app-stock-profile>
+<br />
+
+<div class="accordion">
+  <mat-accordion multi="true">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title> Latest Annual Financial Statements</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <mat-tab-group>
+          <mat-tab label="Balance Sheet"
+            ><app-balance-sheet></app-balance-sheet
+          ></mat-tab>
+          <mat-tab label="Income Statement"
+            ><app-income-statement></app-income-statement
+          ></mat-tab>
+        </mat-tab-group>
+        <small>*All currency values are in millions</small>
+      </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Key Metrics</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <app-key-metrics></app-key-metrics>
+      </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Discounted Cash Flow</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <app-disc-cash-flow></app-disc-cash-flow>
+      </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Company Rating</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <app-company-rating></app-company-rating>
+      </ng-template>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

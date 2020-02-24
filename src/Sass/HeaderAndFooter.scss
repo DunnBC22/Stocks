@@ -1,0 +1,55 @@
+/*=============================================
+=         HeaderAndFooter scss file           =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the HeaderAndFooter 
+      scss file. It includes css for the Header 
+      and Footer only.
+*/
+
+//@import "./variables";
+
+.side-by-side {
+  display: inline-block;
+  margin: 0 auto;
+
+  font: $quad-color;
+
+  a {
+    color: $quad-color;
+  }
+}
+
+#site-title h1 {
+  padding-left: 25px;
+}
+
+#footer {
+  margin: 10px;
+  padding: 10px;
+  background-image: linear-gradient(
+    90deg,
+    $primary-color,
+    $secondary-color,
+    $ternary-color
+  );
+  height: 19px;
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+#header {
+  margin: 10px;
+  padding: 10px;
+  background: radial-gradient($primary-color, $secondary-color);
+  height: 80px;
+  border: 5px $quint-color solid;
+  width: 80px;
+}
+
+.page-title h1 {
+  text-align: center;
+}

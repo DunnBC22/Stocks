@@ -1,0 +1,47 @@
+/*=============================================
+=            MatTables scss file              =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the MatTables scss 
+      file. It includes the the css for the 
+      Material UI tables used on the Sector 
+      Performance and Major Indexes pages.
+*/
+
+.mat-table {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 10px $quad-color solid;
+  border-radius: 12px;
+  box-shadow: 12px 12px 5px $secondary-color;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+}
+
+.mat-cell {
+  background-color: $ternary-color;
+  vertical-align: middle;
+}
+
+.mat-header-cell {
+  background-color: $secondary-color;
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+
+table td,
+table th {
+  padding-left: 0.35em;
+  padding-right: 0.35em;
+}
+
+table th {
+  font-size: 1.05em;
+}

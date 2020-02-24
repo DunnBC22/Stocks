@@ -1,0 +1,167 @@
+<!--======================================
+=              Income Statement          =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is a subsection 
+      that is displayed in the accordion on 
+      the Google page under the "Latest 
+      Annaul Financial Statements" tab.
+-->
+
+<small
+  >Date:<ng-container *ngIf="IncomeStatement">
+    {{ IncomeStatement["0"]["date"] | date: "longDate" }}</ng-container
+  ></small
+>
+
+<br />
+<br />
+
+<table>
+  <tr>
+    <th>Account</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Revenue</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Revenue"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Cost of Revenue</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Cost of Revenue"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Gross Profit</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Gross Profit"] | finStateInMillions | currency
+        }}
+      </ng-container>
+    </td>
+  </tr>
+  <tr>
+    <td>R&D Expenses</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["R&D Expenses"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>SG&A Expense</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["SG&A Expense"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Operating Expenses</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Operating Expenses"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Operating Income</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Operating Income"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Interest Expense</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Interest Expense"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Earnings before Tax</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Earnings before Tax"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Income Tax Expense</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Income Tax Expense"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Net Income</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["Net Income"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>EBITDA</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">
+        {{
+          IncomeStatement["0"]["EBITDA"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>EBIT</td>
+    <td>
+      <ng-container *ngIf="IncomeStatement">{{
+        IncomeStatement["0"]["EBIT"] | finStateInMillions | currency
+      }}</ng-container>
+    </td>
+  </tr>
+</table>

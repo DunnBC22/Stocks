@@ -1,0 +1,328 @@
+<!--======================================
+=               Balance Sheet            =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the Balance Sheet 
+      sub section that is displayed in the 
+      accordion on the Google page under 
+      the tab named "Latest Annual 
+      Financial Statements."
+-->
+
+<small
+  ><ng-container *ngIf="BalanceSheet"
+    >Date: {{ BalanceSheet["0"]["date"] | date: "longDate" }}</ng-container
+  ></small
+>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th>Account</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Cash and Cash Equivalents</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Cash and cash equivalents"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Short-Term Investments</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Short-term investments"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Cash & Short-Term Investments</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Cash and short-term investments"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Receivables</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Receivables"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Inventories</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Inventories"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Current Assets</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total current assets"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Property, Plant & Equipment</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Property, Plant & Equipment Net"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Goodwill & Intangible Assets</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Goodwill and Intangible Assets"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Long-Term Investments</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Long-term investments"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Tax Assets</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Tax assets"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Non-Current Assets</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total non-current assets"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Assets</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{ BalanceSheet["0"]["Total assets"] | finStateInMillions | currency }}
+      </ng-container>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<table>
+  <tr>
+    <th>Account</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Payables</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Payables"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Short-Term Debt</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Short-term debt"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Short-Term Liabilities</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total current liabilities"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Long-Term Debt</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Long-term debt"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Debt</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total debt"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Deferred Revenue</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Deferred revenue"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Tax Liabilities</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Tax Liabilities"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Deposit Liabilities</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Deposit Liabilities"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Non-Current Liabilities</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total non-current liabilities"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Liabilities</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total liabilities"] | finStateInMillions | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+
+  <tr>
+    <td>Other Comprehensive Income</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Other comprehensive income"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Retained Earnings</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Retained earnings (deficit)"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Shareholders Equity</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total shareholders equity"]
+            | finStateInMillions
+            | currency
+        }}</ng-container
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Total Equity</td>
+    <td>
+      <ng-container *ngIf="BalanceSheet">
+        {{
+          BalanceSheet["0"]["Total assets"] | finStateInMillions | currency
+        }}</ng-container
+      >
+      <!--Total assets calculates to be the same value as Total Equity-->
+    </td>
+  </tr>
+</table>

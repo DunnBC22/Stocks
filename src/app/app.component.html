@@ -1,0 +1,23 @@
+<!--======================================
+=               App Component            =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This page holds the HTML 
+      for the header, navigation links, page 
+      info (router-outlet), and footer.
+-->
+
+<app-header></app-header>
+
+<nav>
+  <a routerLink="about-me" routerLinkActive="active">About Me</a>
+  <a routerLink="google" routerLinkActive="active">Google</a>
+  <a routerLink="major-indexes" routerLinkActive="active">Major Indexes</a>
+  <a routerLink="sector-performance" routerLinkActive="active">Sector Perf</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

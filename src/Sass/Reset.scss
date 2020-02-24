@@ -1,0 +1,63 @@
+/*=============================================
+=            Reset scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the reset scss file. 
+      It just provides the basic values to 
+      reset the CSS.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+h2,
+h3,
+h5,
+h6,
+p,
+a,
+img,
+small,
+strong,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+footer,
+header,
+nav {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  text-align: left;
+}

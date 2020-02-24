@@ -1,0 +1,26 @@
+/*=============================================
+=            Accordion scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the accordion scss file. 
+      It includes all css relevant to accordions 
+      used across the website.
+*/
+
+@import "./variables";
+
+.accordion {
+  width: 70%;
+  margin: auto;
+
+  .mat-expansion-panel-header {
+    background-color: $secondary-color;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

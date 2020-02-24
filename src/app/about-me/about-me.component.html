@@ -1,0 +1,79 @@
+<!--======================================
+=               About Me                 =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the HTML 
+      for the About Me Component. First link at 
+      top of page. Home page also redirects to
+      this page. Images link to other relevant
+      pages.
+-->
+
+<br />
+<div class="page-title">
+  <h1>About me!</h1>
+</div>
+<br />
+<div class="picture">
+  <a href="{{ LinkedInUrl }}">
+    <img src="{{ LinkedInPhoto }}" alt="My LinkedIn Photo" />
+  </a>
+</div>
+<br />
+<div class="about-me-text">
+  <h4>{{ slogan }}</h4>
+  <br />
+  <h6>{{ SalesPitch }}</h6>
+  <br />
+</div>
+
+<div class="accordion">
+  <mat-accordion multi="true">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Education</mat-panel-title>
+      </mat-expansion-panel-header>
+      <br />
+      <ng-template matExpansionPanelContent>{{ MyEducation }}</ng-template>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Skills</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <br />
+        <div class="skill-list">
+          <ul>
+            <li *ngFor="let skill of MySkills">
+              {{ skill }}
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header
+        ><mat-panel-title>Other Ways to Contact Me!</mat-panel-title>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <br />
+        <div class="logos">
+          <div class="logo-side-by-side">
+            <a href="{{ LinkedInUrl }}"
+              ><img src="{{ LinkedInLogo }}" alt="Link to my LinkedIn page!"
+            /></a>
+          </div>
+          <div class="logo-side-by-side float-right">
+            <a href="{{ GithubUrl }}">
+              <img src="{{ GithubLogo }}" alt="Link to my Github account!" />
+            </a>
+          </div>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -1,0 +1,42 @@
+<!--======================================
+=               Major Indexes            =
+=======================================-->
+<!--
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This page outputs the 
+      Major Index information using the 
+      Material UI library. Also,it styles 
+      (red/green) the change percentage 
+      based on the input value.
+-->
+
+<br />
+<div class="page-title">
+  <h1>Major Indexes</h1>
+</div>
+
+<table mat-table [dataSource]="majorIndex" class="mat-elevation-z8">
+  <ng-container matColumnDef="Ticker">
+    <th mat-header-cell *matHeaderCellDef>Ticker</th>
+    <td mat-cell *matCellDef="let m">{{ m.ticker }}</td>
+  </ng-container>
+  <ng-container matColumnDef="IndexName">
+    <th mat-header-cell *matHeaderCellDef>Index Name</th>
+    <td mat-cell *matCellDef="let m">{{ m.indexName }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Price">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let m">{{ m.price | currency }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Changes">
+    <th mat-header-cell *matHeaderCellDef>Changes</th>
+    <td mat-cell *matCellDef="let m">
+      <div [style.color]="m.changes >= 0 ? 'green' : 'red'">
+        {{ m.changes }}
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

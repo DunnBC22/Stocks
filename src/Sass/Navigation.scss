@@ -1,0 +1,53 @@
+/*=============================================
+=            Navigation scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the Navigation scss 
+      file. It includes only the css for the 
+      Navigation bar.
+*/
+
+nav {
+  text-align: center;
+
+  a {
+    color: $secondary-color;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.05em;
+    padding-bottom: 0.05em;
+    text-decoration-line: none;
+    height: auto;
+    border: 2px solid $quad-color;
+    background-color: $quint-color;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 5px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px $secondary-color;
+
+    @media (max-width: 450px) {
+      margin-left: 2px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 350px) {
+      margin-left: 2px;
+      font-size: 12px;
+    }
+  }
+
+  a:hover {
+    background-color: $ternary-color;
+    box-shadow: 5px 5px 5px $secondary-color;
+  }
+
+  a:active {
+    background-color: $nav-active-color;
+    box-shadow: 1px 1px 1px $secondary-color;
+  }
+}

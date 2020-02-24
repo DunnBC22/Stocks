@@ -1,0 +1,51 @@
+/*=============================================
+=            SiteWide scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the SiteWide scss 
+      file. It includes items that are used on 
+      multiple pages and the background css.
+*/
+
+body {
+  background-image: linear-gradient(90deg, $ternary-color, $secondary-color);
+}
+
+.float-right {
+  float: right;
+}
+
+.float-center {
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+@mixin center-with-lr-margins($margin: 15%) {
+  margin-left: $margin;
+  margin-right: $margin;
+  text-align: center;
+}
+
+.about-me-text {
+  @include center-with-lr-margins();
+}
+
+.stock-profile-margin {
+  margin-left: 12%;
+  margin-right: 12%;
+
+  @media (max-width: 450px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+a {
+  color: $quad-color;
+}

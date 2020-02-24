@@ -1,0 +1,38 @@
+/*=============================================
+=            Lists scss file             =
+=============================================*/
+
+/*
+    @Author: Brian Dunn                           
+    @Creation Date: 2-22-2020                     
+    @Description: This is the Lists scss file. 
+      It includes the css relevant to lists 
+      (i.e.- Skills).
+*/
+
+@mixin listing {
+  list-style: none;
+  text-align: center;
+  width: 33.3%;
+  display: inline-block;
+
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+}
+
+.skill-list li {
+  @include listing();
+}
+
+.short-list {
+  text-align: center;
+}
+
+th {
+  font-weight: bolder;
+}
